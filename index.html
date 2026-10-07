@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>یه سوال ☺️</title>
+
+    <style>
+        body {
+            text-align: center;
+            margin-top: 120px;
+            font-family: Arial;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #dateBox {
+            display: none;
+            margin-top: 25px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>میشه نسنا جونو بگیری؟ ☺️😂</h1>
+
+    <button onclick="yes()">بله 😍</button>
+    <button onclick="no()">نه 😐</button>
+
+    <div id="dateBox">
+        <h2>تاریخ انتخاب کن ☺️❤️</h2>
+
+        <input type="date" id="date">
+
+        <br><br>
+
+        <button onclick="submitDate()">انتخاب شد 😎</button>
+    </div>
+
+    <script>
+        function yes() {
+            document.getElementById("dateBox").style.display = "block";
+        }
+
+        function no() {
+            alert("غلط کردی بیشور 😂😭 باید بگیری!");
+        }
+
+        function submitDate() {
+            let date = document.getElementById("date").value;
+
+            if (date === "") {
+                alert("اول یه تاریخ انتخاب کن 😂");
+            } else {
+                alert("پس قرارمون شد: " + date + " ☺️❤️");
+            }
+        }
+    </script>
+
+</body>
+</html>
